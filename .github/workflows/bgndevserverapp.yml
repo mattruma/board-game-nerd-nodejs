@@ -16,7 +16,7 @@ jobs:
           node-version: "16.x"
 
       - run: npm install
-        working-directory: .src/server
+        working-directory: src/server
 
       - uses: actions/upload-artifact@v2
         with:
