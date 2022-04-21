@@ -4,7 +4,7 @@ const axios = require('axios')
 var app = express()
 
 app.get("/bgg/games/hot", (req, res) => {
-    const url = "https://bgg-json.azurewebsites.net/hot";
+    var url = process.env.BGG_JSON_API || "https://bgg-json.azurewebsites.net/hot";
     
     axios.get(url)
         .then(response => res.json(response.data))
